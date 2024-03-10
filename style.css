@@ -1,0 +1,646 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+/*header*/
+header{
+    background-color: rgba(210, 245, 9, 0);
+    display: flex;
+    align-items: center;
+    width:calc(100% - 5%);
+    height:3wh;
+    margin: 5% 0% 0% 5%;
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+.text{/*классы ссылок*/
+    font-size: 20px;
+    margin-left: 5%;
+}
+nav{
+  width: 70%;
+}
+
+.btn{
+    background-color: chocolate;
+    color: aliceblue;
+    font-size: 120%;
+    padding: 0.5%;
+    position: relative;
+    left: 30%;
+    border-color: #efefef;
+    border-radius: 20px;
+}
+.reg{
+  position: relative;
+  left: 20px;
+}
+.btn1{
+  padding: 5%;
+}
+
+.burger-menu {
+  position: fixed;
+  z-index: 3; /* Устанавливаем нижний порядок отображения для меню */
+  top: 0;
+  right: -550px;
+  width: 250px;
+  height: 100%;
+  background-color: #1598cc;
+  padding: 20px;
+  border-left: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  transition: right 0.5s ease;
+}
+
+.burger-btn-container {
+  position: fixed;
+  z-index: 4; /* Устанавливаем более высокий порядок отображения для кнопки */
+  top: 0px; /* Выравниваем кнопку по верхнему краю экрана */
+  right: -40px; /* Выравниваем кнопку по правому краю экрана */
+}
+
+.burger-btn {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  cursor: pointer;
+}
+
+.burger-menu.active {
+  right: 0; /* Отображаем меню на экране */
+}
+
+
+.burger-menu a {
+  display: block;
+  margin-bottom: 10px; 
+  color: #333; 
+  text-decoration: none;
+  transition: color 0.3s ease; 
+}
+
+.burger-menu a:hover {
+  color: #ff4500; 
+}
+
+
+.burger-menu .btt {
+  margin-top: 20px; 
+  padding: 10px 20px;
+  background-color: #ff4500; 
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.burger-menu .btt:hover {
+  background-color: #ff6347; 
+}
+
+.img18{
+  position: relative;
+  left: 30%;
+}
+
+.burger-menu .log {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px; 
+  border: 1px solid #ccc; 
+  border-radius: 5px; 
+  box-sizing: border-box; 
+  transition: border-color 0.3s ease; 
+}
+
+
+.burger-menu .pass {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px; 
+  box-sizing: border-box; 
+  transition: border-color 0.3s ease; 
+}
+
+
+.burger-menu .log:focus,
+.burger-menu .pass:focus {
+  border-color: #ff4500; 
+}
+.btt{
+  position: relative;
+  right: -35%;
+  top: 30%;
+  background-color: aqua;
+  border-color: #ccc;
+}
+
+.success-message {
+  display: none;
+  position: fixed;
+  top: 3%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: #4CAF50;
+  color: rgb(247, 247, 247);
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+.burger-btn {
+  width: 30px;
+  height: 50px;
+  cursor: pointer;
+  border: #000000;
+  z-index: 3;
+}
+
+.line {
+  width: 100%;
+  height: 3px;
+  margin: 10px;
+  background-color: #000000;
+  transition: all 0.3s ease;
+}
+
+.line.middle {
+  margin-top: 6px;
+}
+
+.line.top.open {
+  transform: translateY(6px) rotate(25deg);
+}
+
+.line.bottom.open {
+  transform: translateY(-6px) rotate(-25deg);
+}
+
+/*main*/
+
+body{
+  overflow-x:hidden;
+}
+
+/*ARticle1*/
+#art1{
+  padding: 0% 0% 2% 0%;
+  position: relative;
+}
+.BG1-2{
+  margin: 0 0 23%;
+}
+.img1{
+  z-index: -1;
+  position: absolute;
+  top: -300px;
+  background-image: url(image/BG1.svg);
+  background-size: cover;
+  left: 5.5%;
+}
+
+.union{
+  display: inline;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+}
+
+.hexagon{
+    position: absolute;
+    left: 485px;
+    top: 170px;
+    padding: 2px;
+    width: calc(var(--hex-side) * 1.732);
+    height: var(--hex-side);
+    transform: rotate(var(--hex-rotate));
+    background: #efefef;
+    z-index: 0;
+  
+}
+
+
+
+.compass-svg{
+    transform: rotate(30deg);
+}
+
+:root{
+  --hex-side: 121px;
+  --hex-rotate: 30deg; /* угол наклона шестиугольника относительно центра */
+}
+
+.hexagon:before, 
+.hexagon:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #efefef;
+  top: 0;
+  left: 0;
+}
+
+.hexagon:before {
+  transform: rotate(60deg);
+}
+
+.hexagon:after {
+  transform: rotate(-60deg);
+}
+
+.text1{
+  z-index: 1;
+    position: relative;
+    left: -10px;
+    bottom: -10px;
+    text-align: center;
+    font-size: 20px;
+    transform: rotate(-30deg);
+}
+
+.text2{/*h1 в первом артикле*/
+    font-size: 43px;
+    margin-left: 3%;
+}
+
+.supp1{
+  display: inline-flex;
+  margin: 0;
+}
+
+.supp{
+  position: relative;
+  top: 20vh;
+  align-items: flex-end;
+
+}
+
+.img2{
+    width: 90%;
+    z-index: -1;
+  
+}
+
+.text3{
+    font-size: 20px;
+    left: 6%;
+    top: 25%;
+    position: absolute;
+    text-align: center;
+    color: aliceblue;
+}
+
+  
+
+.bigger{
+    font-size: 80px;
+}
+
+
+/*Article2*/
+#art2{
+  margin: 0% 0% 15% 0%;
+  position: relative;
+  width: 100%;
+  height: 700px;
+}
+
+.block1{/*DIV1*/
+    z-index: 1;
+    margin: 0;
+    background: rgb(41, 44, 63);
+    position: relative;
+    right: 0;
+    transform: translateX(0);
+    padding: 10% 0% 5% 0%;
+    color: aliceblue;
+    overflow-y:hidden;
+}
+
+.cons-button{
+  display: inline-flex;
+  width: 20px;
+  height: 20px;
+}
+
+.cons-button {
+  border-top: 2px solid gray;
+  border-left: 2px solid gray;
+  transform: rotate(-45deg);
+}
+
+.cons-button:hover {
+  border-top: 2px solid black;
+  border-left: 2px solid black;
+}
+
+.inviz{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+}
+
+ul h1 {
+    position: absolute;
+    right: 0px;
+    top: 60px;
+    left: 400px;
+    bottom: 0px;
+}
+
+.dir{
+    display: flex;
+    top: 10%;
+}
+
+
+.dar{
+    justify-content: start;
+    align-items: start;
+}
+
+.der{
+    justify-content: end;
+    align-items: start;
+    position: relative;
+    bottom: 40px;
+}
+
+.ttn{
+    font-size: 15px;
+    margin-left: 30px;
+    padding: 30px 60px 20px 0px;
+    list-style-image: url(image/Polygon\ 142.png);
+}
+
+.block2{/*DIV2*/
+  z-index: 1;
+  top: 0%;
+  overflow-y:hidden;  /*для вертикального*/
+  margin: 0% 0% 50% 0%;
+  background: rgb(41, 44, 63);
+  position: absolute;
+  left: -100%;
+  transform: translateX(0);
+  padding: 10% 0% 5% 0%;
+  color: aliceblue;
+  animation: block2-cons forwards 3s;
+  -webkit-animation-play-state:paused;
+  animation-play-state:paused;
+}
+
+.block {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease;
+  overflow-x: hidden;
+}
+
+.reverse{
+  transform: translateX(100%);
+}
+
+.start-anim {
+  -webkit-animation-play-state:running;
+  animation-play-state:running;
+}
+
+
+
+.tt{
+    font-size: 15px;
+    margin-left: 30px;
+    padding: 10px 60px 20px 0px;
+    list-style-image: url(image/Polygon\ 142.svg);
+}
+
+
+/*footer*/
+
+div{
+    margin: 30px;
+}
+
+#art3{
+  position: relative;
+  display: flex;
+  margin-bottom: 70%;
+}
+#art3 h1{
+  font-size: 65px;
+  color: #efefef;
+}
+#art3 h3{
+  font-size: 25px;
+  color: #efefef;
+}
+#art3>p{
+  color: #868686;
+  font-size: 20px;
+  position: relative;
+  left: 40px;
+  top: 20px;
+}
+.BG3{
+  position: absolute;
+  left: 40%;
+  z-index: -1;
+}
+
+.Ablock{
+  background-color: rgb(61, 173, 248);
+  text-align: center;
+  position: absolute;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* тень */
+  top: 20px;
+}
+
+.Bblock{
+  position: absolute;
+  background-color: rgb(61, 173, 248);
+  text-align: center;
+  top: 150px;
+  right: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* тень */
+}
+.Cblock{
+  position:absolute;
+  background-color: rgb(61, 173, 248);
+  text-align: center;
+  top: 280px;
+  right: 39%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* тень */
+}
+.Dblock{
+  position: absolute;
+  top: 700px;
+  right: 50%;
+}
+.avnc{
+  font-size: 25px;
+}
+.lyam{
+  font-size: 60px;
+  color: rgb(50, 154, 223);
+}
+
+.img81{
+  position: relative;
+  justify-content: flex-start;
+  width: 10%;
+  height: 20%;
+  right: 0%;
+}
+footer{
+  margin: 0;
+  padding: 0;
+}
+.foot1{
+  height: 100%;
+  font-size: 15px;
+  width: 100%;
+  margin: 0;
+  position: relative;
+}
+.left-align-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 20px; 
+  border-bottom: 1px solid black; 
+}
+
+.left-align-footer .foot1 {
+  display: flex;
+  align-items: center; 
+  padding-bottom: 10px; 
+  border-top: 2px solid black; 
+  border-bottom: 2px solid black;
+  margin: 0 ; 
+}
+
+.left-align-footer .foot1 img {
+  margin: 0% 36% 0% 5%; 
+}
+
+.left-align-footer p {
+  margin: 5px 0; 
+}
+.left-text {
+  color: #868686;
+  position: relative;
+  font-size: 25px;
+  left: 50px;
+  margin-right: auto; 
+}
+
+.right-text {
+  color: #868686;
+  font-size: 25px;
+  position: relative;
+  left: 850px;
+  bottom: 35px; 
+}
+.text-link {
+  display: none; /* Скрываем бургер-меню изначально */
+}
+
+/* Показываем бургер-меню только на мобильных устройствах */
+@media (max-width: 768px) {
+  .desktop-nav {
+      display: none; /* Скрываем основное меню на мобильных устройствах */
+  }
+
+  .text-link {
+      display: block; /* Показываем бургер-меню на мобильных устройствах */
+  }
+
+  /* Стили для вертикального расположения ссылок в бургер-меню */
+  .text-link .text {
+      display: block;
+      margin-bottom: 10px; /* Добавляем отступ между ссылками */
+  }
+  .img1{
+    opacity: 0;
+  }
+  .burger-menu{
+    top: 0;
+    left: 300px;
+  }
+  .burger-btn{
+    right: 910px;
+    bottom: 40px;
+  }
+  .hexagon {
+    width: calc(var(--hex-side) * 1.732);
+    height: var(--hex-side); 
+    clip-path: polygon(
+
+
+    ); 
+    left: 9px;
+    top: 62px;
+}
+  .BG1-2{
+    background-image: url(image/BG1-2.svg);
+    background-size: cover;
+    padding: 0 0 410px;
+    margin: 0;
+  }
+  header{
+    margin: 0;
+  }
+  .line{
+    background-color: #efefef;
+  }
+  .text2{
+    position: relative;
+    top: 340px;
+    opacity: 1;
+    font-size: 27px;
+  }
+  :root{
+    --hex-side: 80px;
+    --hex-rotate: 30deg;
+  }
+  .text1{ 
+    left: 0px;
+    bottom: 20px;
+    font-size: 20px;
+
+  }
+  .supp{
+    position: relative;
+    top: 400px;
+  }
+  .text{
+    color: #efefef;
+  }
+  #art2{
+    opacity: 0;
+  }
+  .text3{
+    font-size: 18px;
+  }
+  .img2{
+    transform: rotate(180deg);
+    width: 100%;
+  }
+}
