@@ -562,7 +562,7 @@ footer{
   display: none; /* Скрываем бургер-меню изначально */
 }
 .burger-menu{
-    display: none;
+  display: none;
 }
 
 /* Показываем бургер-меню только на мобильных устройствах */
@@ -584,11 +584,11 @@ footer{
     opacity: 0;
   }
   .bigger{
-    font-size: 17vw;
+    font-size: 18vw;
   }
   .burger-menu{
     top: 0;
-    left: 300px;
+    left: 0px;
   }
   .burger-btn{
     right: 0px;
@@ -597,10 +597,6 @@ footer{
   .hexagon {
     width: calc(var(--hex-side) * 1.732);
     height: var(--hex-side); 
-    clip-path: polygon(
-
-
-    ); 
     left: 18.5px;
     top: 52.5px;
 }
@@ -628,7 +624,7 @@ footer{
   }
   .text1{ 
     left: 0px;
-    bottom: 20px;
+    bottom: 4.5vw;
     font-size: 4.5vw;
 
   }
@@ -643,7 +639,7 @@ footer{
     opacity: 0;
   }
   .text3{
-    font-size: 18px;
+    font-size: 4.8vw;
   }
   .img2{
     transform: rotate(180deg);
