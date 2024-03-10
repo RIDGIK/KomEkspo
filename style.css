@@ -561,6 +561,9 @@ footer{
 .text-link {
   display: none; /* Скрываем бургер-меню изначально */
 }
+.burger-menu{
+    display: none;
+}
 
 /* Показываем бургер-меню только на мобильных устройствах */
 @media (max-width: 768px) {
