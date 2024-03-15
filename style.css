@@ -584,7 +584,7 @@ footer{
     opacity: 0;
   }
   .bigger{
-    font-size: 18vw;
+    font-size: 16vw;
   }
   .burger-menu{
     top: 0;
@@ -623,9 +623,9 @@ footer{
     --hex-rotate: 30deg;
   }
   .text1{ 
-    left: 0px;
-    bottom: 4.5vw;
-    font-size: 4.5vw;
+    left: 0;
+    bottom: 0.5vh;
+    font-size: 4vmin;
 
   }
   .supp{
@@ -639,7 +639,8 @@ footer{
     opacity: 0;
   }
   .text3{
-    font-size: 4.8vw;
+    font-size: 4.5vw;
+    right: 0;
   }
   .img2{
     transform: rotate(180deg);
