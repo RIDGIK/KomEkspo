@@ -1,3 +1,18 @@
+let links = document.querySelectorAll('.scroll');
+let targetID; //переменная, в которую запишем id целевого элемента 
+links.forEach(function (element) {
+    element.addEventListener('click', function (event) {
+        event.preventDefault(); //отключить стандартное поведение
+        targetID = element.getAttribute('href'); //получить id целевого
+
+        document.querySelector(targetID).scrollIntoView({ //метод для 
+
+            behavior: 'smooth', //анимация прокрутки auto - резко, smooth
+
+            block: 'start' //вертикальное выравнивание
+        })
+    })
+})
 $('.cons-button').on('click', function() {
   $('.block1').toggleClass('reverse');
   $('.block2').toggleClass('reverse');
@@ -30,4 +45,3 @@ function login() {
 }, 3000);
   }
 document.getElementById('loginButton').addEventListener('click', login);
-
