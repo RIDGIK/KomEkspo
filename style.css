@@ -18,7 +18,7 @@ a{
     color: #000;
 }
 
-.text{/*классы ссылок*/
+.scroll{/*классы ссылок*/
     font-size: 20px;
     margin-left: 5%;
 }
@@ -567,7 +567,7 @@ footer{
 
 /* Показываем бургер-меню только на мобильных устройствах */
 @media (max-width: 768px) {
-  .desktop-nav {
+  .menu_item {
       display: none; /* Скрываем основное меню на мобильных устройствах */
   }
 
@@ -636,6 +636,10 @@ footer{
     color: #efefef;
   }
   #art2{
+    margin-top: 100%;
+    width: 100%;
+  }
+  .inviz{
     opacity: 0;
   }
   .text3{
